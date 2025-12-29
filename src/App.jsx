@@ -190,6 +190,7 @@ function App() {
   const [scene, setScene] = useState(1)
   const [textIndex, setTextIndex] = useState(0)
   const [showMessage, setShowMessage] = useState(false)
+  const [key, setKey] = useState(0)
 
   const apologyTexts = [
     "Hey… 🥺",
@@ -210,7 +211,7 @@ function App() {
             return prev
           }
         })
-      }, 1500)
+      }, 1200)
       return () => clearInterval(timer)
     }
   }, [scene])
@@ -219,12 +220,19 @@ function App() {
     setShowMessage(true)
   }
 
+  const resetToFlowers = () => {
+    setScene(1)
+    setTextIndex(0)
+    setShowMessage(false)
+    setKey(prev => prev + 1) // Force re-render
+  }
+
   return (
     <div className="app">
       <AnimatePresence mode="wait">
         {scene === 1 && (
           <motion.div
-            key="scene1"
+            key={`scene1-${key}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -325,7 +333,7 @@ function App() {
                     className="btn btn-got-it"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => setScene(1)}
+                    onClick={resetToFlowers}
                   >
                     Got it! 😊
                   </motion.button>
