@@ -207,11 +207,11 @@ function App() {
           if (prev < apologyTexts.length - 1) {
             return prev + 1
           } else {
-            setTimeout(() => setScene(3), 1000)
+            setTimeout(() => setScene(3), 2500)
             return prev
           }
         })
-      }, 1200)
+      }, 2000)
       return () => clearInterval(timer)
     }
   }, [scene])
@@ -264,9 +264,15 @@ function App() {
               {apologyTexts.slice(0, textIndex + 1).map((text, index) => (
                 <motion.p
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
+                  initial={{ x: -100, opacity: 0, rotateY: -90 }}
+                  animate={{ x: 0, opacity: 1, rotateY: 0 }}
+                  transition={{ 
+                    duration: 1.2,
+                    type: "spring",
+                    stiffness: 100,
+                    delay: index * 0.3
+                  }}
+                  className="reading-text"
                 >
                   {text}
                 </motion.p>

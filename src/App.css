@@ -90,14 +90,24 @@ body {
 .apology-text {
   text-align: center;
   max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.apology-text p {
+.reading-text {
   font-size: 1.3rem;
-  margin: 1rem 0;
+  margin: 0;
   line-height: 1.6;
   color: #555;
   font-weight: 400;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.reading-text span {
+  display: inline-block;
+  transform-origin: center;
 }
 
 /* Scene 3 - Final Message */
@@ -243,7 +253,7 @@ body {
     font-size: 3rem;
   }
   
-  .apology-text p {
+  .reading-text {
     font-size: 1.1rem;
   }
   
