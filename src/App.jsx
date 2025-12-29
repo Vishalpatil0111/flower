@@ -202,6 +202,7 @@ function App() {
 
   useEffect(() => {
     if (scene === 2) {
+      setTextIndex(0) // Reset text index when scene starts
       const timer = setInterval(() => {
         setTextIndex(prev => {
           if (prev < apologyTexts.length - 1) {
@@ -214,7 +215,7 @@ function App() {
       }, 2000)
       return () => clearInterval(timer)
     }
-  }, [scene])
+  }, [scene, apologyTexts.length])
 
   const handleButtonClick = () => {
     setShowMessage(true)
