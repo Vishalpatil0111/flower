@@ -195,7 +195,6 @@ function App() {
   const apologyTexts = [
     "Hey… 🥺",
     "Okay yes, this is a bit cheesy",
-    "butttt..uk na i can't go with this..",
     "it's a trial to",
     "get premium version of u asap 🥺💗, so.."
   ]
