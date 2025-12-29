@@ -196,8 +196,7 @@ function App() {
     "Okay yes, this is a bit cheesy",
     "butttt..uk na i can't go with this..",
     "it's a trial to",
-    "get premium version of u asap 🥺💗",
-    "so......"
+    "get premium version of u asap 🥺💗"
   ]
 
   useEffect(() => {
@@ -211,7 +210,7 @@ function App() {
             return prev
           }
         })
-      }, 2000)
+      }, 1500)
       return () => clearInterval(timer)
     }
   }, [scene])
