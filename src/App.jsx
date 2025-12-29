@@ -301,7 +301,7 @@ function App() {
                   whileTap={{ scale: 0.95 }}
                   onClick={handleButtonClick}
                 >
-                  Yes 💖
+                  Yes !! 
                 </motion.button>
                 <motion.button
                   className="btn btn-of-course"
@@ -309,7 +309,7 @@ function App() {
                   whileTap={{ scale: 0.95 }}
                   onClick={handleButtonClick}
                 >
-                  Of course 😽
+                  Of course !! 
                 </motion.button>
               </div>
             ) : (
