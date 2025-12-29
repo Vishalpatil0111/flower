@@ -196,7 +196,7 @@ function App() {
     "Okay yes, this is a bit cheesy",
     "butttt..uk na i can't go with this..",
     "it's a trial to",
-    "get premium version of u asap 🥺💗"
+    "get premium version of u asap 🥺💗, so.."
   ]
 
   useEffect(() => {
@@ -206,7 +206,7 @@ function App() {
           if (prev < apologyTexts.length - 1) {
             return prev + 1
           } else {
-            setTimeout(() => setScene(3), 2000)
+            setTimeout(() => setScene(3), 1000)
             return prev
           }
         })
@@ -317,7 +317,7 @@ function App() {
                 className="response-message"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.5 }}
               >
                 <div className="message-card">
                   <p>😁 Then reply with msg, yaha se nai smjhega!!</p>
