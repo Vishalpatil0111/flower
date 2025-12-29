@@ -291,7 +291,7 @@ function App() {
               transition={{ duration: 1 }}
             >
               <h2>Can we meet tomorrow, plzz!!</h2>
-              <p>can we sort it and start new year🥺</p>
+              
             </motion.div>
             
             {!showMessage ? (
