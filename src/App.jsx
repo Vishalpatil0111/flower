@@ -193,10 +193,9 @@ function App() {
   const [key, setKey] = useState(0)
 
   const apologyTexts = [
-    "Hey… 🥺",
-    "Okay yes, this is a bit cheesy still",
-    "it's a one more trial to...",
-    "get premium version of u asap 🥺💗, so.."
+   "Can I have ur time..🥺🥺",
+   "until it's not all mine...❤️",
+   "just wanna ask u...."
   ]
 
   useEffect(() => {
